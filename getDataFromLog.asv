@@ -1,0 +1,51 @@
+function [dataGear1, dataGear2] = getDataFromLog(fileName)
+    M = readtable(strcat('data/', fileName));    
+    
+    N = height(M);
+    
+    dataGear1 = zeros(height(M),width(M));
+    dataGear2 = zeros(height(M),width(M));
+    
+    for i=1:N
+        if(M(i,:).Gear = 1)
+            dataGear1(i,1) = M(i,:).Ontime_ms_;
+            dataGear1(i,2) = M(i,:).Time_UTC_;
+            dataGear1(i,3) = M(i,:).Distance_km_h_;
+            dataGear1(i,4) = M(i,:).RPM;
+            dataGear1(i,5) = M(i,:).Lambda;
+            dataGear1(i,6) = M(i,:).Starter;
+            dataGear1(i,7) = M(i,:).Fuel_correction;
+            dataGear1(i,9) = M(i,:).FuelConsumption_km_l_;
+            dataGear1(i,10) = M(i,:).FuelConsumed_g_;
+            dataGear1(i,11) = M(i,:).BatteryVoltage_V_;
+            dataGear1(i,12) = M(i,:).OilTemperature_C_;
+            dataGear1(i,13) = M(i,:).WaterTemperature_C_;
+            dataGear1(i,14) = M(i,:).ExhaustTemperature_C_;
+            dataGear1(i,15) = M(i,:).BrakeFront_bar_;
+            dataGear1(i,16) = M(i,:).BrakeRear_bar_;
+            dataGear1(i,17) = M(i,:).State;
+            dataGear1(i,18) = M(i,:).InjectionDuration_us_;
+            dataGear1(i,19) = M(i,:).InjectionAngle;
+        else
+            dataGear2(i,1) = M(i,:).Ontime_ms_;
+            dataGear2(i,2) = M(i,:).Time_UTC_;
+            dataGear2(i,3) = M(i,:).Distance_km_h_;
+            dataGear2(i,4) = M(i,:).RPM;
+            dataGear2(i,5) = M(i,:).Lambda;
+            dataGear2(i,6) = M(i,:).Starter;
+            dataGear2(i,7) = M(i,:).Fuel_correction;
+            dataGear2(i,9) = M(i,:).FuelConsumption_km_l_;
+            dataGear2(i,10) = M(i,:).FuelConsumed_g_;
+            dataGear2(i,11) = M(i,:).BatteryVoltage_V_;
+            dataGear2(i,12) = M(i,:).OilTemperature_C_;
+            dataGear2(i,13) = M(i,:).WaterTemperature_C_;
+            dataGear2(i,14) = M(i,:).ExhaustTemperature_C_;
+            dataGear2(i,15) = M(i,:).BrakeFront_bar_;
+            dataGear2(i,16) = M(i,:).BrakeRear_bar_;
+            dataGear2(i,17) = M(i,:).State;
+            dataGear2(i,18) = M(i,:).InjectionDuration_us_;
+            dataGear2(i,19) = M(i,:).InjectionAngle;
+        end
+        
+        
+end

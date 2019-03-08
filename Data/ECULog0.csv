@@ -1,4 +1,4 @@
- Speed (km/h), Distance (m), RPM, Lambda, Starter, Gear, Fuel correction, Fuel consumption (km/l), Fuel consumed (g), Battery voltage (V), Oil temperature (C), Water temperature (C), Exhaust temperature (C), Brake front (bar), Brake rear (bar), State, Injection duration (us), Injection angle
+ Speed (km/h), Distance (m), RPM, Lambda, Starter, Gear, Fuel correction, Fuel consumption (km/l), Fuel consumed (g), Battery voltage (V), Oil temperature (C), Water temperature (C), Exhaust temperature (C), Brake front (bar), Brake rear (bar), State, Injection duration (us), Ignition angle
 0,0,0,0.25,0,1,1,0,0,12.31,43.86,41.62,41.5,0,-0.2,16,10,0
 0,0,0,0.28,0,1,1,0,0,12.33,44,41.59,41.5,0,-0.19,16,10,0
 0,0,0,0.27,0,1,1,0,0,12.31,43.91,41.71,41.52,0,-0.19,16,10,0
