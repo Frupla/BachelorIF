@@ -1,0 +1,4 @@
+data = getDataFromLog('test.csv');
+%%
+figure(1)
+plot(data.rpm,data
