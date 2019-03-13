@@ -1,10 +1,15 @@
-getDataFromLog('logType2 (159).csv');
-
+d0 = getDataFromLog('logType2 (1).csv');
+d1 = getDataFromLog('logType2 (2).csv');
+d2 = getDataFromLog('logType2 (3).csv');
+d3 = getDataFromLog('logType2 (4).csv');
+d4 = getDataFromLog('logType2 (5).csv');
+d5 = getDataFromLog('logType2 (6).csv');    
+d6 = getDataFromLog('logType2 (7).csv');
 
 %%
 
-for i = 1:407
-    eval(sprintf("d%d = getDataFromLog('logType2 (%d).csv');",i,i));
+for i = 1:1:407
+    d0 = getDataFromLog('logType ('i''
 end
 
 
