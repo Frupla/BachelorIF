@@ -1,10 +1,12 @@
 warning('OFF', 'MATLAB:table:ModifiedAndSavedVarnames')
 
+
 %%
 
 for i = 1:407
     eval(sprintf("d%d = getDataFromLog('logType2 (%d).csv');",i,i));
 end
+
 
 %%
 
