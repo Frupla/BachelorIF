@@ -1,5 +1,5 @@
-data = getDataFromLog('2018-07-03 21-36 ECU Log - 8.csv');
-data1 = data;
+data = getDataFromLog('logType2 (11).csv');
+%%
 data1(1639,:) = [];
 data1(1638,:) = [];
 data1(1637,:) = [];
