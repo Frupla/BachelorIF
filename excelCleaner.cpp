@@ -10,6 +10,7 @@ using namespace std;
 int main(){
 
 	int n = 407;
+	int q = 0;
 
 	int repeats = 0;
 	int lineNumber = 0;
@@ -28,35 +29,36 @@ int main(){
 	for(int i = 1; i <= n; i++){
 		toOpen = filePath + "logType2 (" + to_string(i) + ").csv";
 		
-		cout << toOpen << endl;
+
+		//cout << toOpen << endl;
 
 
 		inFile.open(toOpen);
 
+		ofstream output(filePath + "logType2 (" + to_string(i) + ") clean.csv");
+
 		if(!inFile){
 			cout << "Unable to open " << toOpen << endl;
 		}else{
-			while(getline(inFile, x)){
+			while(getline(inFile,x)){
 				//cout << x << endl;
 
-				if(x.compare("OnTime") == 310){
-					if(repeats){
-						cout << "One in logType2(" << i << ").csv, line " << lineNumber << endl;
-					}
-					repeats++;
+				q = x.find("ovf");
+
+//				cout << x << " q: " << q << endl; 
+
+				if(q > 0){
+//					cout << "replacing" << endl;
+					x.replace(q,q+2,"999");
 				}
-				lineNumber++;
+
+				output << x << endl;
+				
 			}
-			repeats = 0;
-			lineNumber = 0;
 		}
 
 		inFile.close();
 	}
-	
-
-
-
 	return 0;
 }
 

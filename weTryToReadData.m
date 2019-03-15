@@ -1,16 +1,26 @@
 warning('OFF', 'MATLAB:table:ModifiedAndSavedVarnames')
 
+%%
+
+d = getDataFromLog('logType2 (2).csv');
 
 %%
 
-for i = 1:407
-    eval(sprintf("d%d = getDataFromLog('logType2 (%d).csv');",i,i));
+for i = 3:407
+    eval(sprintf("d = [d ; getDataFromLog('logType2 (%d).csv')];",i));
 end
 
-
 %%
 
-drawStuff(d40,1)
+figure(10)
+hold on
+yyaxis left
+plot(d.RPM,d.InjectionDuration_us_,'.');
+yyaxis right
+plot(d.RPM,d.Lambda,'.');
+xlim([1000,4000])
+%%
+drawStuff(d,1)
 
 %%
 function drawStuff(data, n)
