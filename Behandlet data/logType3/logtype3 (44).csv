@@ -1,0 +1,6 @@
+OnTime_ms_,Time_UTC_,Speed_km_h_,Distance_m_,RPM,Lambda,Starter,Gear,FuelCorrection,FuelConsumption_km_l_,FuelConsumed_g_,BatteryVoltage_V_,OilTemperature_C_,WaterTemperature_C_,ExhaustTemperature_C_,BrakeFront_bar_,BrakeRear_bar_,State,InjectionDuration_us_,InjectionAngle
+4175,1970-01-01 00:00:04,0,0,0,0.27,0,1,0.95,0,0,13.03,28.56,28.52,27.59,-9.75,0.07,16,10,0
+6175,1970-01-01 00:00:06,0,0,0,0.29,0,1,0.95,0,0,13.04,28.5,28.55,27.58,-9.75,0.07,16,10,0
+7175,1970-01-01 00:00:07,0,0,0,0.29,0,1,0.95,0,0,13.03,28.56,28.48,27.63,-9.75,0.07,16,10,0
+8175,1970-01-01 00:00:08,0,0,0,0.29,0,1,0.95,0,0,13.01,28.63,28.55,27.56,-9.75,0.07,16,10,0
+9175,1970-01-01 00:00:09,0,0,0,0.29,0,1,0.95,0,0,12.99,28.6,28.6,27.56,-9.75,0.07,16,10,0
