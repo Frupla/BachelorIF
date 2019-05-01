@@ -1,0 +1,75 @@
+d1 = readtable('actualRun.csv');
+d2 = readtable('actualRun2.csv');
+d3 = readtable('actualRun3.csv');
+%%
+d = readtable('actualRun8.csv');
+%%
+figure(1)
+scatter(d2.OnTime_ms_,d2.RPM)
+title('RPM')
+
+figure(2)
+scatter(d2.OnTime_ms_,d2.Speed_km_h_)
+title('speed')
+
+figure(3)
+scatter(d2.OnTime_ms_,d2.Lambda)
+title('lambda')
+
+figure(4)
+scatter(d2.OnTime_ms_,d2.InjectionDuration_us_)
+title('Injection time')
+
+figure(5)
+scatter(d2.OnTime_ms_,d2.Gear)
+title('Gear')
+%%
+
+figure(7)
+hold on
+yyaxis left
+scatter(d2.OnTime_ms_,d2.RPM, 'g')
+yyaxis right
+scatter(d2.OnTime_ms_,d2.Lambda, 'b')
+scatter(d2.OnTime_ms_,d2.Gear, 'r')
+hold off
+%%
+figure(6)
+hold on
+yyaxis left
+scatter(d.RPM,d.t_inj_1)
+scatter(d.RPM,d.t_inj_1)
+yyaxis right
+scatter(d.RPM,d.Lambda_1)
+hold off
+%%
+figure(1)
+gscatter(d.RPM,d.t_inj_1,d.sweep);
+%%
+figure(2)
+plot(d.RPM,[d.lambda_1,d.lambda_2],'.');
+%figure(3)
+%gscatter(d4.time_ms,d4.lambda_2,d4.sweep);
+%%
+t1 = readtable('temperatur1.csv');
+t2 = readtable('temperatur2.csv');
+t3 = readtable('temperatur3.csv');
+%%
+figure(1)
+yyaxis left
+gscatter(t1.RPM,t1.Lambda,t1.Gear,'br','xx')
+yyaxis right
+plot(t1.RPM,t1.OilTemperature_C_,'.')
+
+figure(2)
+yyaxis left
+gscatter(t2.RPM,t2.Lambda,t2.Gear,'br','xx')
+yyaxis right
+
+plot(t2.RPM,t2.OilTemperature_C_,'.')
+
+figure(3)
+yyaxis left
+gscatter(t3.RPM,t3.Lambda,t3.Gear,'br','xx')
+yyaxis right
+plot(t3.RPM,t3.OilTemperature_C_,'.')
