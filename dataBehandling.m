@@ -3,6 +3,12 @@ d = readtable('actualRun8.csv');
 d.lambda_1(isnan(d.lambda_1)) = 0;
 d.lambda_2(isnan(d.lambda_2)) = 0;
 
+d.oil_temp1(isnan(d.oil_temp1)) = 0;
+d.oil_temp2(isnan(d.oil_temp2)) = 0;
+
+d.water_temp1(isnan(d.water_temp1)) = 0;
+d.water_temp2(isnan(d.water_temp2)) = 0;
+
 %%
 lambda12 = 1.2*ones(25,1);
 lambda08 = 0.8*ones(25,1);
@@ -19,7 +25,7 @@ plot(d.RPM(d.sweep == 5),d.lambda_1(d.sweep == 5));
 plot(d.RPM(d.sweep == 1),lambda12)
 plot(d.RPM(d.sweep == 1),lambda08)
 hold off
-xlim([1500 4000])
+%xlim([1500 4000])
 legend('1','2','3','4','5','Location','EastOutside')
 
 figure(2)
@@ -32,7 +38,7 @@ plot(d.RPM(d.sweep == 10),d.lambda_1(d.sweep == 10));
 plot(d.RPM(d.sweep == 1),lambda12)
 plot(d.RPM(d.sweep == 1),lambda08)
 hold off
-xlim([1500 4000])
+%xlim([1500 4000])
 legend('6','7','8','9','10','Location','EastOutside')
 
 figure(3)
@@ -45,7 +51,7 @@ plot(d.RPM(d.sweep == 15),d.lambda_1(d.sweep == 15));
 plot(d.RPM(d.sweep == 1),lambda12)
 plot(d.RPM(d.sweep == 1),lambda08)
 hold off
-xlim([1500 4000])
+%xlim([1500 4000])
 legend('11','12','13','14','15','Location','EastOutside')
 
 figure(4)
@@ -59,7 +65,7 @@ plot(d.RPM(d.sweep == 21),d.lambda_1(d.sweep == 21));
 plot(d.RPM(d.sweep == 1),lambda12)
 plot(d.RPM(d.sweep == 1),lambda08)
 hold off
-xlim([1500 4000])
+%xlim([1500 4000])
 legend('16','17','18','19','20','21','Location','EastOutside')
 
 
@@ -74,7 +80,7 @@ plot(d.RPM(d.sweep == 5),d.lambda_2(d.sweep == 5));
 plot(d.RPM(d.sweep == 1),lambda12)
 plot(d.RPM(d.sweep == 1),lambda08)
 hold off
-xlim([1500 4000])
+%xlim([1500 4000])
 legend('1','2','3','4','5','Location','EastOutside')
 
 figure(6)
@@ -87,7 +93,7 @@ plot(d.RPM(d.sweep == 10),d.lambda_2(d.sweep == 10));
 plot(d.RPM(d.sweep == 1),lambda12)
 plot(d.RPM(d.sweep == 1),lambda08)
 hold off
-xlim([1500 4000])
+%xlim([1500 4000])
 legend('6','7','8','9','10','Location','EastOutside')
 
 figure(7)
@@ -100,7 +106,7 @@ plot(d.RPM(d.sweep == 15),d.lambda_2(d.sweep == 15));
 plot(d.RPM(d.sweep == 1),lambda12)
 plot(d.RPM(d.sweep == 1),lambda08)
 hold off
-xlim([1500 4000])
+%xlim([1500 4000])
 legend('11','12','13','14','15','Location','EastOutside')
 
 figure(8)
@@ -114,46 +120,23 @@ plot(d.RPM(d.sweep == 21),d.lambda_2(d.sweep == 21));
 plot(d.RPM(d.sweep == 1),lambda12)
 plot(d.RPM(d.sweep == 1),lambda08)
 hold off
-xlim([1500 4000])
+%xlim([1500 4000])
 legend('16','17','18','19','20','21','Location','EastOutside')
+
 %%
-l1  = mean(d.lambda_1(d.sweep == 1));
-L1  = mean(d.lambda_2(d.sweep == 1));
-l2  = mean(d.lambda_1(d.sweep == 2)); 
-L2  = mean(d.lambda_2(d.sweep == 2));
-l3  = mean(d.lambda_1(d.sweep == 3));
-L3  = mean(d.lambda_2(d.sweep == 3));
-l4  = mean(d.lambda_1(d.sweep == 4));
-L4  = mean(d.lambda_2(d.sweep == 4));
-l5  = mean(d.lambda_1(d.sweep == 5));
-L5  = mean(d.lambda_2(d.sweep == 5));
-l6  = mean(d.lambda_1(d.sweep == 6));
-L6  = mean(d.lambda_2(d.sweep == 6));
-l7  = mean(d.lambda_1(d.sweep == 7));
-L7  = mean(d.lambda_2(d.sweep == 7));
-l8  = mean(d.lambda_1(d.sweep == 8));
-L8  = mean(d.lambda_2(d.sweep == 8));
-l9  = mean(d.lambda_1(d.sweep == 9));
-L9  = mean(d.lambda_2(d.sweep == 9));
-l10 = mean(d.lambda_1(d.sweep == 10));
-L10 = mean(d.lambda_2(d.sweep == 10));
-l11 = mean(d.lambda_1(d.sweep == 11));
-L11 = mean(d.lambda_2(d.sweep == 11));
-l12 = mean(d.lambda_1(d.sweep == 12));
-L12 = mean(d.lambda_2(d.sweep == 12));
-l13 = mean(d.lambda_1(d.sweep == 13));
-L13 = mean(d.lambda_2(d.sweep == 13));
-l14 = mean(d.lambda_1(d.sweep == 14)) + mean(d.lambda_2(d.sweep == 14));
-l15 = mean(d.lambda_1(d.sweep == 15)) + mean(d.lambda_2(d.sweep == 15));
-l16 = mean(d.lambda_1(d.sweep == 16)) + mean(d.lambda_2(d.sweep == 16));
-l17 = mean(d.lambda_1(d.sweep == 17)) + mean(d.lambda_2(d.sweep == 17));
-l18 = mean(d.lambda_1(d.sweep == 18)) + mean(d.lambda_2(d.sweep == 18));
-l19 = mean(d.lambda_1(d.sweep == 19)) + mean(d.lambda_2(d.sweep == 19));
-l20 = mean(d.lambda_1(d.sweep == 20)) + mean(d.lambda_2(d.sweep == 20));
-l21 = mean(d.lambda_1(d.sweep == 21)) + mean(d.lambda_2(d.sweep == 21));
 
-l = [l1,l2,l3,l4,l5,l6,l7,l8,l9,l10,l11,l12,l13,l14,l15,l16,l17,l18,l19,l20,l21];
-    
-figure(100)
-plot(l)
+[avgLambda1,n] = meanBySweep(d.lambda_1);
+avgLambda2 = meanBySweep(d.lambda_2);
+avgOil1 = meanBySweep(d.oil_temp1);
+avgOil2 = meanBySweep(d.oil_temp2);
+avgWater1 = meanBySweep(d.water_temp1);
+avgWater2 = meanBySweep(d.water_temp2);
 
+
+figure(200)
+yyaxis right
+plot(n,[avgLambda1;avgLambda2],'r')
+yyaxis left
+hold on
+plot(n,[avgOil1;avgOil2;avgWater1;avgWater2],'b')
+hold off

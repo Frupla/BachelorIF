@@ -1,4 +1,4 @@
-time_ms,  RPM, lambda_1, oil_temp1, air_temp1, water_temp1, lambda_2, ,oil_temp2, air_temp2, water_temp2, t_inj_1, t_inj_2, sweep,
+time_ms,  RPM, lambda_1, oil_temp1, air_temp1, water_temp1, lambda_2,oil_temp2, air_temp2, water_temp2, t_inj_1, t_inj_2, sweep,
 441695.00,0.00,1.47,47.75,0.00,46.46,nan,nan,nan,nan,7046.77,7000.00,1.00,
 441800.00,250.00,nan,nan,nan,nan,nan,nan,nan,nan,7000.00,7000.00,1.00,
 441886.00,500.00,nan,nan,nan,nan,nan,nan,nan,nan,7000.00,7000.00,1.00,
