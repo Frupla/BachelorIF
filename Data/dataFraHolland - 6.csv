@@ -1,0 +1,3 @@
+OnTime (ms),Time (UTC),Speed (km/h),Distance (m),RPM,Lambda,Starter,Gear,Fuel correction,Fuel consumption (km/l),Fuel consumed (g),Battery voltage (V),Oil temperature (C),Water temperature (C),Exhaust temperature (C),Brake front (bar),Brake rear (bar),State,Injection duration (us),Injection angle,burning
+1092.00,1970-01-01 00:00:01.092,0.00,0.00,0.00,0.80,0.00,1.00,1.00,0.00,0.00,12.57,40.45,48.09,-0.01,0.99,1.91,16.00,10.00,0.00,0.00
+2188.00,1970-01-01 00:00:02.188,0.00,0.00,0.00,0.80,0.00,1.00,1.00,0.00,0.00,12.56,40.61,48.13,-0.01,1.50,2.07,16.00,10.00,0.00,0.00
