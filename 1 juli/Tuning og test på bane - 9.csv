@@ -1,0 +1,1 @@
+OnTime_(ms),Time_(UTC),Speed_(km/h),Distance_(m),RPM,Lambda,Starter,Gear,Fuel_correction,Fuel_consumption_(km/l),Fuel_consumed_(g),Battery_voltage_(V),Oil_temperature_(C),Water_temperature_(C),Exhaust_temperature_(C), Air_Temperature_(C), Brake_front_(bar),Brake_rear_(bar),ecu_state, injection_duration_(us), injection_angle, burning, tuning_state

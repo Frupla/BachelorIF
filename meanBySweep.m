@@ -1,11 +1,11 @@
 function [out,index] = meanBySweep(inArray)
 
-n = length(inArray)/25;
+n = length(inArray)/10;
 
 out = zeros(1,n);
 
 for i = 1:n
-    out(i) = mean(inArray(7+(i-1)*25:16+(i-1)*25));
+    out(i) = mean(inArray(1+(i-1)*10:10+(i-1)*10));
 end
 
 index = 1:n;
