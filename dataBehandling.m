@@ -5,16 +5,42 @@ clc
 [r1,r2] = processSweep('actualRun15.csv');
 
 %%
-d = readtable('23-juni/11Omgange.csv');
-q = readtable('data/2018-07-04 ECU Log UC Practice.csv');
+q = readtable('2 juli 3/eveningOnTrack - 25.csv');
+d = readtable('2 juli 3/eveningOnTrack - 28.csv');
 
 figure(2)
-plot(d.RPM,d.Lambda,'o')
+plot(d.RPM(d.Gear == 1),d.Lambda(d.Gear == 1),'o')
+title('Lambda, gear 1')
 xlim([1500 4000])
 
 figure(3)
-plot(q.RPM,q.Lambda,'o')
+plot(d.RPM(d.Gear == 2),d.Lambda(d.Gear == 2),'o')
+title('Lambda, gear 2')
 xlim([1500 4000])
+
+%%
+figure(4)
+plot(d.OnTime__ms_,d.Fuel_consumption__km_l_)
+
+figure(5)
+
+plot(d.OnTime__ms_,d.Fuel_consumed__g_)
+
+
+%hold on
+%plot(q.OnTime__ms_,q.Water_temperature__C_)
+%hold off
+
+%%
+
+figure(4)
+plot(d.Lambda(d.burning == 1))
+
+    
+
+%figure(3)
+%plot(q.RPM,q.Lambda,'o')
+%xlim([1500 4000])
 
 %%
 
