@@ -32,7 +32,7 @@ plot(d.OnTime__ms_,d.Fuel_consumed__g_/rho)
 grid()
 
 figure(6)
-plot(d.OnTime__ms_,d.Water_temperature__C_)
+plot(q.OnTime__ms_,q.Water_temperature__C_)
 
 
 %%
@@ -48,7 +48,7 @@ plot([d.Lambda(d.burning==1)])
 
 %%
 
-d = readtable('5 juli/DWC - 69.csv');
+d = readtable('5 juli/testDWC - 49.csv');
 
 figure(2)
 plot(d.RPM(d.Gear == 1),d.Lambda(d.Gear == 1),'o')
@@ -63,7 +63,7 @@ xlim([1500 4000])
 figure(4)
 plot(d.Lambda(d.burning == 1))
 hold on
-plot(d.RPM(d.burning == 1)/1000)
+plot(d.Water_temperature__C_(d.burning == 1)/100)
 hold off
 
 %%

@@ -89,9 +89,18 @@ int main (){
 	}
 	infile.close();
 
-	for(int i = 0; i < 7; i++){
-		for(int j = 0; j < 19; j++){
-			cout << " " << injectionLut1[i][j];
+	cout << "Gear 1\n";
+	for(int i = 0; i < 19; i++){
+		for(int j = 0; j < 7; j++){
+			cout << " " << injectionLut1[j][i];
+		}
+		cout << endl;
+	}
+	cout << "\nGear 2\n";
+
+	for(int i = 0; i < 19; i++){
+		for(int j = 0; j < 7; j++){
+			cout << " " << injectionLut2[j][i];
 		}
 		cout << endl;
 	}
