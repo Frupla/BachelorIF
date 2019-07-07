@@ -9,7 +9,8 @@ d = readtable('3. juli/1. race/2019-07-03 10-56 ECU Log - 32.csv');
 %q = readtable('data/2018-07-04 ECU Log UC Practice.csv');
 
 figure(2)
-plot(d.RPM,d.Lambda,'o')
+plot(d.RPM(d.Gear == 1),d.Lambda(d.Gear == 1),'o')
+title('Lambda, gear 1')
 xlim([1500 4000])
 
 figure(3)
@@ -20,15 +21,66 @@ plot(d.Water_temperature__C_,d.Lambda)
 xlim([60 90])
 
 
+%figure(30)
+%plot(q.RPM,q.Lambda,'o')
+%xlim([1500 4000])
+plot(d.RPM(d.Gear == 2),d.Lambda(d.Gear == 2),'o')
+title('Lambda, gear 2')
+xlim([1500 4000])
+
+%%
+figure(4)
+plot(d.OnTime__ms_,d.Fuel_consumption__km_l_)
+grid()
+
+%%
+
+rho = 745;
+
+figure(5)
+plot(d.OnTime__ms_,d.Fuel_consumed__g_/rho)
+grid()
+
+figure(6)
+plot(d.OnTime__ms_,d.Water_temperature__C_)
+
+Vreal = 44.04219641385897;
+Vmeasured = max(d.Fuel_consumed__g_/rho);
+
+correction = Vreal/Vmeasured;
+
+max(d.Distance__m_/1000)/(Vmeasured)
+
+%%
+
+figure(4)
+plot([d.Lambda(d.burning==1)])
+
+    
+
 %figure(3)
 %plot(q.RPM,q.Lambda,'o')
 %xlim([1500 4000])
 
 %%
 
-d = readtable('24-juni/tuningFileProcessed.csv');
+d = readtable('5 juli/DWC - 69.csv');
 
+figure(2)
+plot(d.RPM(d.Gear == 1),d.Lambda(d.Gear == 1),'o')
+title('Lambda, gear 1')
+xlim([1500 4000])
 
+figure(3)
+plot(d.RPM(d.Gear == 2),d.Lambda(d.Gear == 2),'o')
+title('Lambda, gear 2')
+xlim([1500 4000])
+
+figure(4)
+plot(d.Lambda(d.burning == 1))
+hold on
+plot(d.RPM(d.burning == 1)/1000)
+hold off
 
 %%
 d.lambda_1(isnan(d.lambda_1)) = 0;
