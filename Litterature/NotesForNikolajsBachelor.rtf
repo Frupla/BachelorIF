@@ -1,0 +1,45 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1561\cocoasubrtf600
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\froman\fcharset0 Times-Roman;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 Notes for Nikolaj\'92s bachelor:\
+\
+Research his sources for the statement : \'93Thus in modern cars there is only closed-loop lambda control during steady-state operation, while the control system is entirely based on feed forward control during acceleration [9], [16].\'94 (page 24)\
+The ecocar\'92s engine never operatres under steady state conditions, it\'92s always either accelerating or off.  \
+\
+\
+Find out how the ecocar was controlled in 2012\
+\
+Maybe use graphs from his test of the 2012 system (page 32)\
+\
+\
+What did he do: \
+conclude that making a feedback loop in non-steady state conditions was difficult and not the industry standard. \
+\
+Made one anyway, but combined it with a very simple engine map (RPM vs injection-length, like the one used until 2018). After each burn the system analyses the data and moves then moves the injection lengths of the entire map up or down as necessary. It is the same principle as the \'93fuel-correction\'94 value in the UI, except automatic and done after each burn is completed.\
+\
+\
+\
+Notes for Engine Modeling and control\
+In [source for book here], [author] lists describes and ECU\'92s task as: \'93
+\f1\fs26\fsmilli13333 \cf2 \expnd0\expndtw0\kerning0
+optimize and su- pervise all relevant functions of an internal combustion engine (ICE). 
+\f0\fs24 \cf0 \kerning1\expnd0\expndtw0 \'93\
+And devides this task into four subtasks:\
+\
+\\begin\{itemize\}\
+\\item 
+\f1\fs26\fsmilli13333 \cf2 \expnd0\expndtw0\kerning0
+torque generation according to the drivers accelerator pedal 
+\f0\fs24 \cf0 \kerning1\expnd0\expndtw0 \
+\\item low fuel consumption \
+\\item low exhaust emissions and low noise\
+\\item good driving behaviour\
+\\end\{itemize\}\
+\
+The goal of the ecocar\'92s ECU is only low fuel consumption. \
+\
+In most industry vehicles, feed forward (open loop) is used when measurements are difficult to make or expensive, and feed back (closed loop) is used when it\'92s easier, fx for lambda and knock control.}

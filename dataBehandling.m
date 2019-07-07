@@ -5,16 +5,24 @@ clc
 [r1,r2] = processSweep('actualRun15.csv');
 
 %%
-d = readtable('23-juni/11Omgange.csv');
-q = readtable('data/2018-07-04 ECU Log UC Practice.csv');
+d = readtable('3. juli/1. race/2019-07-03 10-56 ECU Log - 32.csv');
+%q = readtable('data/2018-07-04 ECU Log UC Practice.csv');
 
 figure(2)
 plot(d.RPM,d.Lambda,'o')
 xlim([1500 4000])
 
 figure(3)
-plot(q.RPM,q.Lambda,'o')
-xlim([1500 4000])
+plot(d.OnTime__ms_,d.Water_temperature__C_)
+
+figure(4)
+plot(d.Water_temperature__C_,d.Lambda)
+xlim([60 90])
+
+
+%figure(3)
+%plot(q.RPM,q.Lambda,'o')
+%xlim([1500 4000])
 
 %%
 
