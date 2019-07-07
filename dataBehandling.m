@@ -25,7 +25,7 @@ grid()
 
 %%
 
-rho = 745/1000;
+rho = 745;
 
 figure(5)
 plot(d.OnTime__ms_,d.Fuel_consumed__g_/rho)
@@ -34,6 +34,12 @@ grid()
 figure(6)
 plot(d.OnTime__ms_,d.Water_temperature__C_)
 
+Vreal = 44.04219641385897;
+Vmeasured = max(d.Fuel_consumed__g_/rho);
+
+correction = Vreal/Vmeasured;
+
+max(d.Distance__m_/1000)/(Vmeasured)
 
 %%
 
