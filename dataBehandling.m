@@ -73,20 +73,6 @@ plot(d.RPM(d.burning == 1)/1000)
 hold off
 
 %%
-d.lambda_1(isnan(d.lambda_1)) = 0;
-d.lambda_2(isnan(d.lambda_2)) = 0;
- 
-d.oil_temp1(isnan(d.oil_temp1)) = 0;
-d.oil_temp2(isnan(d.oil_temp2)) = 0;
-  
-d.water_temp1(isnan(d.water_temp1)) = 0;
-d.water_temp2(isnan(d.water_temp2)) = 0;
-  
-d.air_temp1(isnan(d.air_temp1)) = 0;
-d.air_temp2(isnan(d.air_temp2)) = 0;
-
-
-%%
 figure(1)
 scatter3(d.RPM,(d.temp+12)*5,d.lambda_1, ones(length(d.sweep),1)*20,d.sweep)
 xlabel('RPM')
@@ -157,65 +143,181 @@ end
 
 %%
 figure(300)
-scatter(d.RPM,d.oil_temp1);
+scatter(d.RPM,d.lambda_1);
 hold on
-scatter(d.RPM,d.oil_temp2);
+scatter(d.RPM,d.lambda_2);
 hold off
 
 
-%%
-t1 = d.tinj_1(d.temp==60);
-t2 = d.tinj_1(d.temp==65);
-t3 = d.tinj_1(d.temp==70);
-t4 = d.tinj_1(d.temp==75);
+%% Kode som laver plots før vi tunede efter temperatur
+close all
 
-T1 = d.tinj_2(d.temp==60);
-T2 = d.tinj_2(d.temp==65);
-T3 = d.tinj_2(d.temp==70);
-T4 = d.tinj_2(d.temp==75);
+d = readtable('actualRun5.csv');
 
-l1 = d.lambda_1(d.temp==60);
-l2 = d.lambda_1(d.temp==65);
-l3 = d.lambda_1(d.temp==70);
-l4 = d.lambda_1(d.temp==75);
 
-L1 = d.lambda_2(d.temp==60);
-L2 = d.lambda_2(d.temp==65);
-L3 = d.lambda_2(d.temp==70);
-L4 = d.lambda_2(d.temp==75);
 
-RPM = (1500:250:3750)';
-temp = (60:5:75)';
+d.lambda_1 = oldLambda2New(d.lambda_1);
 
-t = [t1(end-9:end),t2(end-9:end),t3(end-9:end),t4(end-9:end)];
-T = [T1(end-9:end),T2(end-9:end),T3(end-9:end),T4(end-9:end)];
+d.lambda_2 = oldLambda2New(d.lambda_2);
 
-l = [l1(end-9:end),l2(end-9:end),l3(end-9:end),l4(end-9:end)];
-L = [L1(end-9:end),L2(end-9:end),L3(end-9:end),L4(end-9:end)];
+d.lambda_1(isnan(d.lambda_1)) = 0;
+d.lambda_2(isnan(d.lambda_2)) = 0;
+ 
+% d.oil_temp1(isnan(d.oil_temp1)) = 0;
+% d.oil_temp2(isnan(d.oil_temp2)) = 0;
+%   
+% d.water_temp1(isnan(d.water_temp1)) = 0;
+% d.water_temp2(isnan(d.water_temp2)) = 0;
+%   
+% d.air_temp1(isnan(d.air_temp1)) = 0;
+% d.air_temp2(isnan(d.air_temp2)) = 0;
 
-lambda11 = ones(10,4) * 1.1;
-lambda09 = ones(10,4) * 0.9;
 
-figure(50)
-surf(temp,RPM,t)
 
-figure(55)
-surf(temp,RPM,T)
+t1_1 = d.t_inj_1(d.sweep==1);
+t2_1 = d.t_inj_1(d.sweep==2);
+t3_1= d.t_inj_1(d.sweep==3);
+t4_1 = d.t_inj_1(d.sweep==4);
+t5_1 = d.t_inj_1(d.sweep==5);
+t6_1 = d.t_inj_1(d.sweep==6);
+t7_1 = d.t_inj_1(d.sweep==7);
+t8_1 = d.t_inj_1(d.sweep==8);
+t9_1 = d.t_inj_1(d.sweep==9);
+t10_1 = d.t_inj_1(d.sweep==10);
+t11_1 = d.t_inj_1(d.sweep==11);
 
-figure(60)
-surf(temp,RPM,l)
+t1_2 = d.t_inj_2(d.sweep==1);
+t2_2 = d.t_inj_2(d.sweep==2);
+t3_2 = d.t_inj_2(d.sweep==3);
+t4_2 = d.t_inj_2(d.sweep==4);
+t5_2 = d.t_inj_2(d.sweep==5);
+t6_2 = d.t_inj_2(d.sweep==6);
+t7_2 = d.t_inj_2(d.sweep==7);
+t8_2 = d.t_inj_2(d.sweep==8);
+t9_2 = d.t_inj_2(d.sweep==9);
+t10_2 = d.t_inj_2(d.sweep==10);
+t11_2 = d.t_inj_2(d.sweep==11);
+
+l1_1 = d.lambda_1(d.sweep==1);
+l2_1 = d.lambda_1(d.sweep==2);
+l3_1 = d.lambda_1(d.sweep==3);
+l4_1 = d.lambda_1(d.sweep==4);
+l5_1 = d.lambda_1(d.sweep==5);
+l6_1 = d.lambda_1(d.sweep==6);
+l7_1 = d.lambda_1(d.sweep==7);
+l8_1 = d.lambda_1(d.sweep==8);
+l9_1 = d.lambda_1(d.sweep==9);
+l10_1 = d.lambda_1(d.sweep==10);
+l11_1 = d.lambda_1(d.sweep==11);
+
+l1_2 = d.lambda_2(d.sweep==1);
+l2_2 = d.lambda_2(d.sweep==2);
+l3_2 = d.lambda_2(d.sweep==3);
+l4_2 = d.lambda_2(d.sweep==4);
+l5_2 = d.lambda_2(d.sweep==5);
+l6_2 = d.lambda_2(d.sweep==6);
+l7_2 = d.lambda_2(d.sweep==7);
+l8_2 = d.lambda_2(d.sweep==8);
+l9_2 = d.lambda_2(d.sweep==9);
+l10_2 = d.lambda_2(d.sweep==10);
+l11_2 = d.lambda_2(d.sweep==11);
+
+
+% figure(1)
+% plot([d.water_temp1,d.oil_temp1])
+% grid()
+
+RPM = 0:250:6000;
+
+lambdaHigh = oldLambda2New(ones(1,25)*1.1);
+lambdaLow = oldLambda2New(ones(1,25)*0.9);
+
+figure(3)
+subplot(1,2,1)
+patch([RPM,fliplr(RPM)],[lambdaLow,lambdaHigh],[0.9 0.9 0.9])
 hold on
-surf(temp,RPM,[l1(11:20),l2(11:20),l3(11:20),l4(11:20)])
-
-surf(temp,RPM,lambda11)
-surf(temp,RPM,lambda09)
+%plot(RPM,lambdaLow)
+plot(RPM,[...    
+    l1_1,...
+    l4_1,...
+    l6_1,...
+    l7_1,...
+    l8_1,...
+    l9_1,...
+    ],'LineWidth',2)
 hold off
+title('Lambda gear 1')
+legend('Desired lambda','Sweep 1','Sweep 4','Sweep 6','Sweep 7','Sweep 8','Sweep 9','Location','best')
+ylim([0.70 1.6])
+xlim([1500 4000])
+xlabel('RPM')
+ylabel('\lambda')
+xticks(0:250:6000)
+grid()
+subplot(1,2,2)
+plot(RPM,[...    
+    t1_1,...
+    t4_1,...
+    t6_1,...
+    t7_1,...
+    t8_1,...
+    t9_1,...
+    ],'LineWidth',2)
+title('Injection times gear 1')
+legend('Sweep 1','Sweep 4','Sweep 6','Sweep 7','Sweep 8','Sweep 9','Location','best')
+ylim([3000 7000])
+xlim([1500 4000])
+xlabel('RPM')
+ylabel('Injection time [µs]')
+xticks(0:250:6000)
+grid()
 
-figure(65)
-surf(temp,RPM,L)
+figure(4)
+subplot(1,2,1)
+patch([RPM,fliplr(RPM)],[lambdaLow,lambdaHigh],[0.9 0.9 0.9])
+hold on
+%plot(RPM,lambdaLow)
+plot(RPM,[...    
+    l1_2,...
+    l4_2,...    
+    l6_2,...
+    l7_2,...    
+    l8_2,...
+    l9_2,...
+    ],'LineWidth',2)
+hold off
+title('Lambda gear 2')
+legend('Desired lambda','Sweep 1','Sweep 4','Sweep 6','Sweep 7','Sweep 8','Sweep 9','Location','best')
+ylim([0.70 1.6])
+xlim([1500 4000])
+xlabel('RPM')
+ylabel('\lambda')
+xticks(0:250:6000)
+grid()
+subplot(1,2,2)
+plot(RPM,[...    
+    t1_2,...
+    t4_2,...
+    t6_2,...
+    t7_2,...
+    t8_2,...
+    t9_2,...
+    ],'LineWidth',2)
+title('Injection times gear 2')
+legend('Sweep 1','Sweep 4','Sweep 6','Sweep 7','Sweep 8','Sweep 9','Location','best')
+ylim([3000 7000])
+xlim([1500 4000])
+xlabel('RPM')
+ylabel('Injection time [µs]')
+xticks(0:250:6000)
+grid()
+
 
 %%
+figure(10)
+plot(d.time_ms*10^(-3)/60,d.lambda_1)
 
+%%
 figure(100)
 plot3(ones(10,1)*60,RPM,[l1(1:10),l1(11:20),l1(21:30),l1(31:40)])
 hold on
