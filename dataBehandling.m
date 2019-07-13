@@ -5,33 +5,37 @@ clc
 [r1,r2] = processSweep('actualRun15.csv');
 
 %%
-d = readtable('3. juli/1. race/2019-07-03 10-56 ECU Log - 32.csv');
-%q = readtable('data/2018-07-04 ECU Log UC Practice.csv');
+d = readtable('23-juni/11Omgange.csv');
+q = readtable('data/2018-07-07 09-56 ECU Log 4th race - 17.csv');
 
-figure(2)
+
+figure(1)
 plot(d.RPM(d.Gear == 1),d.Lambda(d.Gear == 1),'o')
 title('Lambda, gear 1')
 xlim([1500 4000])
+ylim([0.7 1.6])
+grid();
+
+figure(2)
+plot(q.RPM(q.Gear == 1),oldLambda2New(q.Lambda(q.Gear == 1)),'o')
+title('Lambda, gear 1')
+xlim([1500 4000])
+ylim([0.7 1.6])
+grid();
 
 figure(3)
-plot(d.OnTime__ms_,d.Water_temperature__C_)
-
-figure(4)
-plot(d.Water_temperature__C_,d.Lambda)
-xlim([60 90])
-
-
-%figure(30)
-%plot(q.RPM,q.Lambda,'o')
-%xlim([1500 4000])
 plot(d.RPM(d.Gear == 2),d.Lambda(d.Gear == 2),'o')
 title('Lambda, gear 2')
 xlim([1500 4000])
+ylim([0.7 1.6])
+grid();
 
-%%
 figure(4)
-plot(d.OnTime__ms_,d.Fuel_consumption__km_l_)
-grid()
+plot(q.RPM(q.Gear == 2),oldLambda2New(q.Lambda(q.Gear == 2)),'o')
+title('Lambda, gear 2')
+xlim([1500 4000])
+ylim([0.7 1.6])
+grid();
 
 %%
 
