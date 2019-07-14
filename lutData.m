@@ -100,8 +100,8 @@ plot(RPM',[...
     l1_3_60,...
     ],'LineWidth',2)
 hold off
-title('Lambda gear 1 @ 60^oC')
-legend('Desired lambda','Sweep 1','Sweep 2','Sweep 3','Location','EastOutside')
+title('\lambda gear 1 @ 60^oC')
+legend('Desired \lambda','Sweep 1','Sweep 2','Sweep 3','Location','EastOutside')
 set(gca,'FontSize',15)
 ylim([0.70 1.6])
 xlim([1500 3750])
@@ -113,7 +113,7 @@ xticklabels(["1500"," ","2000"," ","2500","","3000"," ","3500"," ","4000"])
 grid()
 a = 9;
 set(gcf,'PaperUnits','centimeters','PaperPosition',[0 0 a*2.3309 a])
-saveas(gcf,'figurer til bachelor/lambda1_60_LutTest.png');
+saveas(gcf,'figurer til bachelor/lambda1_60_LutTest.eps', 'epsc');
 
 figure(2)
 patch([RPM,fliplr(RPM)],[lambdaLow,lambdaHigh],[0.9 0.9 0.9])
@@ -125,8 +125,8 @@ plot(RPM',[...
     l2_3_60,...
     ],'LineWidth',2)
 hold off
-title('Lambda gear 2 @ 60^oC')
-legend('Desired lambda','Sweep 1','Sweep 2','Sweep 3','Location','EastOutside')
+title('\lambda gear 2 @ 60^oC')
+legend('Desired \lambda','Sweep 1','Sweep 2','Sweep 3','Location','EastOutside')
 set(gca,'FontSize',15)
 ylim([0.70 1.6])
 xlim([1500 3750])
@@ -137,7 +137,7 @@ xticks(1500:250:4000)
 xticklabels(["1500"," ","2000"," ","2500","","3000"," ","3500"," ","4000"])
 grid()
 set(gcf,'PaperUnits','centimeters','PaperPosition',[0 0 a*2.3309 a])
-saveas(gcf,'figurer til bachelor/lambda2_60_LutTest.png');
+saveas(gcf,'figurer til bachelor/lambda2_60_LutTest.eps', 'epsc');
 
 figure(3)
 patch([RPM,fliplr(RPM)],[lambdaLow,lambdaHigh],[0.9 0.9 0.9])
@@ -150,8 +150,8 @@ plot(RPM',[...
     l1_4_65,...
     ],'LineWidth',2)
 hold off
-title('Lambda gear 1 @ 65^oC')
-legend('Desired lambda','Sweep 1','Sweep 2','Sweep 3','Sweep 4','Location','EastOutside')
+title('\lambda gear 1 @ 65^oC')
+legend('Desired \lambda','Sweep 1','Sweep 2','Sweep 3','Sweep 4','Location','EastOutside')
 set(gca,'FontSize',15)
 ylim([0.70 1.6])
 xlim([1500 3750])
@@ -162,7 +162,7 @@ xticks(1500:250:4000)
 xticklabels(["1500"," ","2000"," ","2500","","3000"," ","3500"," ","4000"])
 grid()
 set(gcf,'PaperUnits','centimeters','PaperPosition',[0 0 a*2.3309 a])
-saveas(gcf,'figurer til bachelor/lambda1_65_LutTest.png');
+saveas(gcf,'figurer til bachelor/lambda1_65_LutTest.eps', 'epsc');
 
 figure(4)
 patch([RPM,fliplr(RPM)],[lambdaLow,lambdaHigh],[0.9 0.9 0.9])
@@ -175,8 +175,8 @@ plot(RPM',[...
     l2_4_65,...
     ],'LineWidth',2)
 hold off
-title('Lambda gear 2 @ 65^oC')
-legend('Desired lambda','Sweep 1','Sweep 2','Sweep 3','Sweep 4','Location','EastOutside')
+title('\lambda gear 2 @ 65^oC')
+legend('Desired \lambda','Sweep 1','Sweep 2','Sweep 3','Sweep 4','Location','EastOutside')
 set(gca,'FontSize',15)
 ylim([0.70 1.6])
 xlim([1500 3750])
@@ -187,7 +187,7 @@ xticks(1500:250:4000)
 xticklabels(["1500"," ","2000"," ","2500","","3000"," ","3500"," ","4000"])
 grid()
 set(gcf,'PaperUnits','centimeters','PaperPosition',[0 0 a*2.3309 a])
-saveas(gcf,'figurer til bachelor/lambda2_65_LutTest.png');
+saveas(gcf,'figurer til bachelor/lambda2_65_LutTest.eps', 'epsc');
 
 figure(5)
 patch([RPM,fliplr(RPM)],[lambdaLow,lambdaHigh],[0.9 0.9 0.9])
@@ -200,8 +200,8 @@ plot(RPM',[...
     l1_4_70,...
     ],'LineWidth',2)
 hold off
-title('Lambda gear 1 @ 70^oC')
-legend('Desired lambda','Sweep 1','Sweep 2','Sweep 3','Sweep 4','Location','EastOutside')
+title('\lambda gear 1 @ 70^oC')
+legend('Desired \lambda','Sweep 1','Sweep 2','Sweep 3','Sweep 4','Location','EastOutside')
 set(gca,'FontSize',15)
 ylim([0.70 1.6])
 xlim([1500 3750])
@@ -212,7 +212,7 @@ xticks(1500:250:4000)
 xticklabels(["1500","","2000","","2500","","3000","","3500","","4000"])
 grid()
 set(gcf,'PaperUnits','centimeters','PaperPosition',[0 0 a*2.3309 a])
-saveas(gcf,'figurer til bachelor/lambda1_70_LutTest.png');
+saveas(gcf,'figurer til bachelor/lambda1_70_LutTest.eps', 'epsc');
 
 figure(6)
 patch([RPM,fliplr(RPM)],[lambdaLow,lambdaHigh],[0.9 0.9 0.9])
@@ -225,8 +225,8 @@ plot(RPM',[...
     l2_4_70,...
     ],'LineWidth',2)
 hold off
-title('Lambda gear 2 @ 70^oC')
-legend('Desired lambda','Sweep 1','Sweep 2','Sweep 3','Sweep 4','Location','EastOutside')
+title('\lambda gear 2 @ 70^oC')
+legend('Desired \lambda','Sweep 1','Sweep 2','Sweep 3','Sweep 4','Location','EastOutside')
 set(gca,'FontSize',15)
 ylim([0.70 1.6])
 xlim([1500 3750])
@@ -237,7 +237,7 @@ xticks(1500:250:4000)
 xticklabels(["1500"," ","2000"," ","2500","","3000"," ","3500"," ","4000"])
 grid()
 set(gcf,'PaperUnits','centimeters','PaperPosition',[0 0 a*2.3309 a])
-saveas(gcf,'figurer til bachelor/lambda2_70_LutTest.png');
+saveas(gcf,'figurer til bachelor/lambda2_70_LutTest.eps', 'epsc');
 
 %%
 

@@ -127,15 +127,18 @@ plot(RPM',[...
     l9_1,...
     ],'LineWidth',2)
 hold off
-title('Lambda gear 1')
-legend('Desired lambda','Sweep 1','Sweep 2','Sweep 4','Sweep 5','Sweep 7','Sweep 10','Location','best')
+title('\lambda gear 1')
+legend('Desired \lambda','Sweep 1','Sweep 2','Sweep 4','Sweep 5','Sweep 7','Sweep 10','Location','EastOutside')
 set(gca,'FontSize',15)
 ylim([0.70 1.6])
 xlim([1500 4000])
 xlabel('RPM')
 ylabel('\lambda')
-xticks(0:250:6000)
+xticks(0:500:6000)
 grid()
+saveas(gcf,'figurer til bachelor/lambda1WaterTemp.eps','epsc')
+
+
 
 figure(2)
 plot(RPM,[...    
@@ -147,14 +150,15 @@ plot(RPM,[...
     t10_1,...
     ],'LineWidth',2)
 title('Injection times gear 1')
-legend('Sweep 1','Sweep 2','Sweep 4','Sweep 5','Sweep 7','Sweep 10','Location','best')
+legend('Sweep 1','Sweep 2','Sweep 4','Sweep 5','Sweep 7','Sweep 10','Location','EastOutside')
 set(gca,'FontSize',15)
 ylim([5000 6000])
 xlim([1500 4000])
 xlabel('RPM')
 ylabel('Injection time [µs]')
-xticks(0:250:6000)
+xticks(0:500:6000)
 grid()
+saveas(gcf,'figurer til bachelor/injection1WaterTemp.eps','epsc')
 
 figure(3)
 patch([RPM,fliplr(RPM)],[lambdaLow,lambdaHigh],[0.9 0.9 0.9])
@@ -169,15 +173,17 @@ plot(RPM,[...
     l10_2,...
     ],'LineWidth',2)
 hold off
-title('Lambda gear 2')
-legend('Desired lambda','Sweep 1','Sweep 2','Sweep 4','Sweep 5','Sweep 7','Sweep 10','Location','best')
+title('\lambda gear 2')
+legend('Desired \lambda','Sweep 1','Sweep 2','Sweep 4','Sweep 5','Sweep 7','Sweep 10','Location','EastOutside')
 set(gca,'FontSize',15)
 ylim([0.70 1.6])
 xlim([1500 4000])
 xlabel('RPM')
 ylabel('\lambda')
-xticks(0:250:6000)
+xticks(0:500:6000)
 grid()
+saveas(gcf,'figurer til bachelor/lambda2WaterTemp.eps','epsc')
+
 figure(4)
 plot(RPM,[...    
     t1_2,...
@@ -188,14 +194,16 @@ plot(RPM,[...
     t10_2,...
     ],'LineWidth',2)
 title('Injection times gear 2')
-legend('Sweep 1','Sweep 2','Sweep 4','Sweep 5','Sweep 7','Sweep 10','Location','best')
+legend('Sweep 1','Sweep 2','Sweep 4','Sweep 5','Sweep 7','Sweep 10','Location','EastOutside')
 set(gca,'FontSize',15)
 ylim([5000 6000])
 xlim([1500 4000])
 xlabel('RPM')
 ylabel('Injection time [µs]')
-xticks(0:250:6000)
+xticks(0:500:6000)
 grid()
+saveas(gcf,'figurer til bachelor/injection2WaterTemp.eps','epsc')
+
 
 %%
 

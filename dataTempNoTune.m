@@ -153,15 +153,19 @@ plot(RPM,[...
     l10_1,...
     ],'LineWidth',2)
 hold off
-title('Lambda gear 1, with water temperature kept constant')
-legend('Desired lambda','Sweep 1','Sweep 3','Sweep 5','Sweep 7','Sweep 9','Sweep 10','Location','best')
+title('\lambda gear 1, with water temperature kept constant')
+legend('Desired \lambda','Sweep 1','Sweep 3','Sweep 5','Sweep 7','Sweep 9','Sweep 10','Location','EastOutside')
 set(gca,'FontSize',15)
 ylim([0.70 1.6])
 xlim([1500 4000])
 xlabel('RPM')
 ylabel('\lambda')
-xticks(0:250:6000)
+ xticks(0:500:6000)
 grid()
+saveas(gcf,'figurer til bachelor/lambda1NoTuneWater.eps','epsc')
+
+
+
 figure(2)
 patch([RPM,fliplr(RPM)],[lambdaLow,lambdaHigh],[0.9 0.9 0.9])
 hold on
@@ -174,15 +178,16 @@ plot(RPM,[...
     L10_1,...
     ],'LineWidth',2)
 hold off
-title('Lambda gear 1, with oil temperature kept constant')
-legend('Desired lambda','Sweep 1','Sweep 3','Sweep 5','Sweep 7','Sweep 9','Sweep 10','Location','best')
+title('\lambda gear 1, with oil temperature kept constant')
+legend('Desired \lambda','Sweep 1','Sweep 3','Sweep 5','Sweep 7','Sweep 9','Sweep 10','Location','EastOutside')
 set(gca,'FontSize',15)
 ylim([0.70 1.6])
 xlim([1500 4000])
 xlabel('RPM')
 ylabel('\lambda')
-xticks(0:250:6000)
+ xticks(0:500:6000)
 grid()
+saveas(gcf,'figurer til bachelor/lambda1NoTuneOil.eps','epsc')
 
 figure(3)
 patch([RPM,fliplr(RPM)],[lambdaLow,lambdaHigh],[0.9 0.9 0.9])
@@ -197,15 +202,17 @@ plot(RPM,[...
     l10_2,...   
     ],'LineWidth',2)
 hold off
-title('Lambda gear 2, with water temperature kept constant')
-legend('Desired lambda','Sweep 1','Sweep 3','Sweep 5','Sweep 7','Sweep 9','Sweep 10','Location','best')
+title('\lambda gear 2, with water temperature kept constant')
+legend('Desired \lambda','Sweep 1','Sweep 3','Sweep 5','Sweep 7','Sweep 9','Sweep 10','Location','EastOutside')
 set(gca,'FontSize',15)
 ylim([0.70 1.6])
 xlim([1500 4000])
 xlabel('RPM')
 ylabel('\lambda')
-xticks(0:250:6000)
+ xticks(0:500:6000)
 grid()
+saveas(gcf,'figurer til bachelor/lambda2NoTuneWater.eps','epsc')
+
 figure(4)
 patch([RPM,fliplr(RPM)],[lambdaLow,lambdaHigh],[0.9 0.9 0.9])
 hold on
@@ -218,15 +225,16 @@ plot(RPM,[...
     L10_2,...
     ],'LineWidth',2)
 hold off
-title('Lambda gear 2, with oil temperature kept constant')
-legend('Desired lambda','Sweep 1','Sweep 3','Sweep 5','Sweep 7','Sweep 9','Sweep 10','Location','best')
+title('\lambda gear 2, with oil temperature kept constant')
+legend('Desired \lambda','Sweep 1','Sweep 3','Sweep 5','Sweep 7','Sweep 9','Sweep 10','Location','EastOutside')
 set(gca,'FontSize',15)
 ylim([0.7 1.6])
 xlim([1500 4000])
 xlabel('RPM')
 ylabel('\lambda')
-xticks(0:250:6000)
+xticks(0:500:6000)
 grid()
+saveas(gcf,'figurer til bachelor/lambda2NoTuneOil.eps','epsc')
 
 %%
 figure(10)

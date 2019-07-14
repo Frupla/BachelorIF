@@ -22,16 +22,16 @@ patch([RPM,fliplr(RPM)],[lambdaLow,lambdaHigh],[0.9 0.9 0.9])
 hold on
 plot(d.RPM(d.Gear == 1),d.Lambda(d.Gear == 1),'o')
 hold off
-title('Lambda, gear 1')
+title('\lambda, gear 1')
 set(gca,'FontSize',15)
 ylim([0.70 1.6])
 xlim([1500 3750])
 xlabel('RPM')
 ylabel('\lambda')
-legend('Desired lambda','Lambda','Location','best')
+legend('Desired \lambda','\lambda','Location','best')
 grid();
 set(gcf,'PaperUnits','centimeters','PaperPosition',[0 0 a*r a])
-saveas(gcf,'figurer til bachelor/4vR_R1.png');
+saveas(gcf,'figurer til bachelor/4vR_R1.eps', 'epsc');
 
 
 figure(2)
@@ -39,47 +39,47 @@ patch([RPM,fliplr(RPM)],[lambdalow,lambdahigh],[0.9 0.9 0.9])
 hold on
 plot(q.RPM(q.Gear == 1),oldLambda2New(q.Lambda(q.Gear == 1)),'o')
 hold off
-title('Lambda, gear 1')
+title('\lambda, gear 1')
 set(gca,'FontSize',15)
 ylim([0.70 1.6])
 xlim([1500 3750])
 xlabel('RPM')
 ylabel('\lambda')
-legend('Desired lambda','Lambda','Location','best')
+legend('Desired \lambda','\lambda','Location','best')
 grid();
 set(gcf,'PaperUnits','centimeters','PaperPosition',[0 0 a*r a])
-saveas(gcf,'figurer til bachelor/4vR_41.png');
+saveas(gcf,'figurer til bachelor/4vR_41.eps', 'epsc');
 
 figure(3)
 patch([RPM,fliplr(RPM)],[lambdaLow,lambdaHigh],[0.9 0.9 0.9])
 hold on
 plot(d.RPM(d.Gear == 2),d.Lambda(d.Gear == 2),'o')
 hold off
-title('Lambda, gear 2')
+title('\lambda, gear 2')
 set(gca,'FontSize',15)
 ylim([0.70 1.6])
 xlim([1500 3750])
 xlabel('RPM')
 ylabel('\lambda')
-legend('Desired lambda','Lambda','Location','best')
+legend('Desired \lambda','\lambda','Location','best')
 grid();
 set(gcf,'PaperUnits','centimeters','PaperPosition',[0 0 a*r a])
-saveas(gcf,'figurer til bachelor/4vR_R2.png');
+saveas(gcf,'figurer til bachelor/4vR_R2.eps', 'epsc');
 
 figure(4)
 patch([RPM,fliplr(RPM)],[lambdalow,lambdahigh],[0.9 0.9 0.9])
 hold on
 plot(q.RPM(q.Gear == 2),oldLambda2New(q.Lambda(q.Gear == 2)),'o')
 hold off
-title('Lambda, gear 2')
+title('\lambda, gear 2')
 set(gca,'FontSize',15)
 ylim([0.70 1.6])
 xlim([1500 3750])
 xlabel('RPM')
 ylabel('\lambda')
-legend('Desired lambda','Lambda','Location','best')
+legend('Desired \lambda','\lambda','Location','best')
 grid();
 set(gcf,'PaperUnits','centimeters','PaperPosition',[0 0 a*r a])
-saveas(gcf,'figurer til bachelor/4vR_42.png');
+saveas(gcf,'figurer til bachelor/4vR_42.eps', 'epsc');
 
 

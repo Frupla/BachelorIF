@@ -17,32 +17,32 @@ patch([RPM,fliplr(RPM)],[lambdaLow,lambdaHigh],[0.9 0.9 0.9])
 hold on
 plot(d.RPM(d.Gear == 1),d.Lambda(d.Gear == 1),'o')
 hold off
-title('Lambda, Gear 1')
+title('\lambda, Gear 1')
 set(gca,'FontSize',15)
 ylim([0.70 1.6])
 xlim([1500 3750])
 xlabel('RPM')
 ylabel('\lambda')
-legend('Desired lambda','Lambda','Location','best')
+legend('Desired \lambda','\lambda','Location','best')
 grid();
 set(gcf,'PaperUnits','centimeters','PaperPosition',[0 0 a*r a])
-% saveas(gcf,'figurer til bachelor/429_1.png');
+saveas(gcf,'figurer til bachelor/429_1.eps', 'epsc');
 
 figure(2)
 patch([RPM,fliplr(RPM)],[lambdaLow,lambdaHigh],[0.9 0.9 0.9])
 hold on
 plot(d.RPM(d.Gear == 2),d.Lambda(d.Gear == 2),'o')
 hold off
-title('Lambda, Gear 2')
+title('\lambda, Gear 2')
 set(gca,'FontSize',15)
 ylim([0.70 1.6])
 xlim([1500 3750])
 xlabel('RPM')
 ylabel('\lambda')
-legend('Desired lambda','Lambda','Location','best')
+legend('Desired \lambda','\lambda','Location','best')
 grid();
 set(gcf,'PaperUnits','centimeters','PaperPosition',[0 0 a*r a])
-% saveas(gcf,'figurer til bachelor/429_2.png');
+saveas(gcf,'figurer til bachelor/429_2.eps', 'epsc');
 
 
 %% This is gonna be hell
@@ -105,7 +105,7 @@ n = 1:130;
 % ylabel('RPM')
 % grid();
 % set(gcf,'PaperUnits','centimeters','PaperPosition',[0 0 a*r a])
-% saveas(gcf,'figurer til bachelor/429_R1.png');
+% saveas(gcf,'figurer til bachelor/429_R1.eps', 'epsc');
 
 burn1 = [lap1_burn1;lap2_burn1;lap3_burn1;lap4_burn1;lap5_burn1;lap6_burn1;lap7_burn1;lap8_burn1;lap9_burn1;lap10_burn1;lap11_burn1];
 burn2 = [lap1_burn2;lap2_burn2;lap3_burn2;lap4_burn2;lap5_burn2;lap6_burn2;lap7_burn2;lap8_burn2;lap9_burn2;lap10_burn2;lap11_burn2];
@@ -127,7 +127,7 @@ plot(burn1.RPM(burn1.Gear == 2),burn1.Lambda(burn1.Gear == 2),'o')
 % plot(lap10_burn1.Lambda(lap10_burn1.burning == 1 & lap10_burn1.Gear == 2))
 % plot(lap11_burn1.Lambda(lap11_burn1.burning == 1 & lap11_burn1.Gear == 2))
 hold off
-title('Lambda, 1. burn')
+title('\lambda, 1. burn')
 set(gca,'FontSize',15)
 ylim([0.7 1.6])
 xlim([1500 4000])
@@ -135,7 +135,7 @@ xlabel('RPM')
 ylabel('\lambda')
 grid();
 set(gcf,'PaperUnits','centimeters','PaperPosition',[0 0 a*r a])
-saveas(gcf,'figurer til bachelor/429_L1.png');
+saveas(gcf,'figurer til bachelor/429_L1.eps', 'epsc');
 
 % figure(3)
 % plot(lap2_burn2.RPM(lap2_burn2.burning == 1))
@@ -158,7 +158,7 @@ saveas(gcf,'figurer til bachelor/429_L1.png');
 % ylabel('RPM')
 % grid();
 % set(gcf,'PaperUnits','centimeters','PaperPosition',[0 0 a*r a])
-%  saveas(gcf,'figurer til bachelor/429_R2.png');
+%  saveas(gcf,'figurer til bachelor/429_R2.eps', 'epsc');
 
 
 figure(2)
@@ -176,7 +176,7 @@ plot(burn2.RPM(burn2.Gear == 2),burn2.Lambda(burn2.Gear == 2),'o')
 % plot(lap10_burn2.Lambda(lap10_burn2.burning == 1))
 % plot(lap11_burn2.Lambda(lap11_burn2.burning == 1))
 hold off
-title('Lambda, 2. burn')
+title('\lambda, 2. burn')
 set(gca,'FontSize',15)
 ylim([0.7 1.6])
 xlim([1500 4000])
@@ -184,7 +184,7 @@ xlabel('RPM')
 ylabel('\lambda')
 grid();
 set(gcf,'PaperUnits','centimeters','PaperPosition',[0 0 a*r a])
-saveas(gcf,'figurer til bachelor/429_L2.png');
+saveas(gcf,'figurer til bachelor/429_L2.eps', 'epsc');
 %%
 close all
 figure(5)
@@ -205,7 +205,7 @@ xlim([1 250])
 xlabel('Samples')
 grid();
 set(gcf,'PaperUnits','centimeters','PaperPosition',[0 0 a*r a])
-% saveas(gcf,'figurer til bachelor/429_exLap.png');
+saveas(gcf,'figurer til bachelor/429_exLap.eps', 'epsc');
 
 
 
